@@ -11,9 +11,9 @@ SRC		=		src/*.cpp			\
 
 NAME	=		3D_powder
 
-FLAGS	= -I./SFML-2.5.1_gcc/include -L./SFML-2.5.1_gcc/lib -L./lib -lmy -lm
+FLAGS	= -I./SFML-2.5.1_gcc/include
 
-LINKER	= -L./SFML-2.5.1_gcc/lib -lsfml-graphics -lsfml-window -lsfml-system -L./lib -lmy
+LINKER	= -L./lib -lmy -lm -L./SFML-2.5.1_gcc/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 #-Wl, -rpath=./SFML-2.5.1_gcc/lib
 #-fno-diagnostics-show-labels -fno-diagnostics-show-labels fdiagnostics-generate-patch -Wall -Wextra
@@ -21,9 +21,12 @@ LINKER	= -L./SFML-2.5.1_gcc/lib -lsfml-graphics -lsfml-window -lsfml-system -L./
 
 
 all:
+
 	make -C ./lib build
 	g++ -c $(SRC) $(FLAGS)
+
 	g++ *.o -o $(NAME) $(LINKER)
+	export LD_LIBRARY_PATH=./SFML-2.5.1_gcc/lib && ./$(NAME)
 #-rpath-link=./SFML-2.5.1_gcc/lib
 
 allO4:
@@ -46,13 +49,15 @@ clean:
 	rm -f *.gcda
 
 fclean:	clean
-	#rm -f $(NAME)
+	rm -f $(NAME)
 	make -C ./lib fclean
 	rm -f *.gcno
 	rm -f *.gcda
 	rm -f *.html
 	rm -f vgcore.*
 	rm -f callgrind.*
+	rm -f *.o
+	rm -f libmy.a
 
 clear:
 	clear
