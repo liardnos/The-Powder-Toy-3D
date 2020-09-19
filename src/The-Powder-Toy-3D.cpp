@@ -2,11 +2,33 @@
 #include <iostream>
 #include <math.h>
 #include <vector>
+
+extern "C" {
+    #include "../lib/my.h"
+}
+
+
 using namespace std;
 using namespace sf;
 
+
 int main()
 {
+
+
+
+    lld_t* lld = lld_init();
+
+    lld_insert(lld, (int)lld->data, (void *)"hello ");
+    lld_insert(lld, (int)lld->data, (void*)"how ");
+    lld_insert(lld, (int)lld->data, (void*)"are ");
+    lld_insert(lld, (int)lld->data, (void*)"you? ");
+
+    while (lld->data) {
+        char* str = (char*)lld_pop(lld, 0);
+        cout << str;
+    }
+
     //variable debug
     cout << "hello";
     //variable interface

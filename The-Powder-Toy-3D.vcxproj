@@ -145,7 +145,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="The-Powder-Toy-3D.cpp" />
+    <ClCompile Include="lib\lld\lld_db.c" />
+    <ClCompile Include="lib\lld\lld_free.c" />
+    <ClCompile Include="lib\lld\lld_free_r.c" />
+    <ClCompile Include="lib\lld\lld_init.c" />
+    <ClCompile Include="lib\lld\lld_insert.c" />
+    <ClCompile Include="lib\lld\lld_insert_node.c" />
+    <ClCompile Include="lib\lld\lld_len.c" />
+    <ClCompile Include="lib\lld\lld_len_db.c" />
+    <ClCompile Include="lib\lld\lld_lld_to_tab.c" />
+    <ClCompile Include="lib\lld\lld_pop.c" />
+    <ClCompile Include="lib\lld\lld_pop_node.c" />
+    <ClCompile Include="lib\lld\lld_print_int.c" />
+    <ClCompile Include="lib\lld\lld_print_str.c" />
+    <ClCompile Include="lib\lld\lld_read.c" />
+    <ClCompile Include="lib\lld\lld_sort.c" />
+    <ClCompile Include="lib\lld\lld_tab_to_lld.c" />
+    <ClCompile Include="lib\lld\lld_write.c" />
+    <ClCompile Include="lib\mat\mat.c" />
+    <ClCompile Include="lib\mat\mat2.c" />
+    <ClCompile Include="lib\mat\mat_inv.c" />
+    <ClCompile Include="lib\mat\mat_r.c" />
+    <ClCompile Include="lib\mat\mat_rr.c" />
+    <ClCompile Include="lib\mat\mat_t.c" />
+    <ClCompile Include="lib\mat\mat_tt.c" />
+    <ClCompile Include="src\The-Powder-Toy-3D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\my.h" />
+    <ClInclude Include="src\Header.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
