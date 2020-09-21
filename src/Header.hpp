@@ -58,3 +58,19 @@ void map_free(map_t *map); //free an alocate map
 
 
 #endif
+
+
+#ifndef _player_h_
+#define _player_h_
+
+typedef struct player {
+    float ax = 0; //camera x angle (yaw) 
+    float ay = 0; //camera y angle (pitch)
+    float x = 0; //player position
+    float y = 0;
+    float z = 0;
+    float* matrix; //final 4*4 transformation matrix
+} player_t;
+
+#endif
+

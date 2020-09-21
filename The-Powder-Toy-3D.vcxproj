@@ -170,6 +170,7 @@
     <ClCompile Include="lib\mat\mat_rr.c" />
     <ClCompile Include="lib\mat\mat_t.c" />
     <ClCompile Include="lib\mat\mat_tt.c" />
+    <ClCompile Include="src\player\player.cpp" />
     <ClCompile Include="src\render\render.cpp" />
     <ClCompile Include="src\simulation\simulation.cpp" />
     <ClCompile Include="src\The-Powder-Toy-3D.cpp" />
