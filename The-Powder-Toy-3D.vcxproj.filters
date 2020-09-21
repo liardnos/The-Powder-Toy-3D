@@ -90,6 +90,12 @@
     <ClCompile Include="lib\mat\mat2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\simulation\simulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\my.h">
